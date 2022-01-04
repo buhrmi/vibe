@@ -1,0 +1,88 @@
+form .error {
+  color: #f00;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  margin-bottom: 2rem;  
+}
+
+.container {
+  margin: 0 auto;
+  max-width: min(960px, calc(100vw - 32px));
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+a {
+  color: rgb(212, 56, 129);
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 { 
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+button, .btn {  
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background-color: #ddd;
+}
+
+hr {
+  color: #ccc;
+}
+
+q:before {
+  content: '“';
+}
+q:after {
+  content: '”';
+}
+
+.info {
+  border-bottom: 2px dashed rgb(184 109 111);
+  cursor: pointer;
+  display: inline-block;
+}
