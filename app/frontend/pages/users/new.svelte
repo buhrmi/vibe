@@ -1,23 +1,14 @@
 <script>
   import { useForm, inertia } from '@inertiajs/inertia-svelte'
   import { onMount } from 'svelte';
-  import sha256 from '~/utils/sha256';
   import Item from '~/components/item.svelte';
 
 
-  window.sha256 = sha256
-  let form = useForm('player', {email: '', password: '', name: '', salt: ''})
+  let form = useForm('player', {email: '', password: '', name: ''})
   onMount(function() {
     document.getElementById('username').focus();
   })
   function createUser() {
-    let salt = 0
-    let hash = ''
-    while(!hash.startsWith('000')) {
-      salt += 1
-      hash = sha256($form.name + salt)
-    }
-    $form.salt = salt
     $form.post(`/users`, {preserveScroll: true})
   }
 </script>
@@ -57,7 +48,7 @@
   }
   .username {
     padding: 0.5rem;
-    border: 1px solid #ddd;
+    border-bottom: 1px solid rgb(212, 56, 129);;
     border-radius: 0.25rem;
     display: inline-block;
   }

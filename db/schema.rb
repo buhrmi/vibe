@@ -10,20 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_01_193808) do
+ActiveRecord::Schema.define(version: 2022_01_23_114216) do
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.text "name"
+    t.text "email"
     t.string "password_digest"
     t.string "password_reset_token"
     t.datetime "password_reset_token_created_at"
     t.datetime "email_verified_at"
     t.string "email_verification_token"
+    t.json "links"
     t.string "locale", default: "en"
     t.string "time_zone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "display_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["email_verification_token"], name: "index_users_on_email_verification_token"
     t.index ["name"], name: "index_users_on_name", unique: true

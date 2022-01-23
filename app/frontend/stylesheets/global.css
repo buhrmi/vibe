@@ -5,6 +5,8 @@ form .error {
 body {
   min-height: 100vh;
   position: relative;
+  background-color: black;
+  color: white;
 }
 
 header {
@@ -53,25 +55,27 @@ h4 {
 
 input[type="text"], input[type="password"], input[type="email"] {
   padding: 0.5rem;
-  border: 1px solid #ddd;
+  border-bottom: 1px solid rgb(212, 56, 129);;
   border-radius: 0.25rem;
   outline: none;
+  color: white;
+  background: transparent;
 }
 
 button, .btn {  
   padding: 0.5rem 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(212, 56, 129);;
   border-radius: 0.25rem;
-  background-color: #eee;
+  background-color: rgb(212, 56, 129);;
   cursor: pointer;
 }
 
 button:hover, .btn:hover {
-  background-color: #ddd;
+  background-color: rgb(212, 56, 129);;
 }
 
 hr {
-  color: #ccc;
+  color: #999;
 }
 
 q:before {

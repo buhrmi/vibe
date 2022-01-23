@@ -25,7 +25,6 @@ export default ({mode}) => {
         hot: !prod && {
           preserveLocalState: true
         },
-        emitCss: prod,
         preprocess: [importAssets()]
       }),
       Unocss({

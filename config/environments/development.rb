@@ -62,8 +62,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.eu.mailgun.org",
     :port                 => 465,
-    :user_name            => Rails.application.credentials.mailgun.username,
-    :password             => Rails.application.credentials.mailgun.password,
+    :user_name            => Rails.application.credentials.mailgun_username,
+    :password             => Rails.application.credentials.mailgun_password,
     :authentication       => "plain",
     :enable_starttls_auto => true,
     :ssl => true

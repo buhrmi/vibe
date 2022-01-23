@@ -7,7 +7,7 @@
 <header>
   <div class="container">
     <h1>
-      <a href="/" use:inertia>Vibe</a>
+      <a href="/" use:inertia><img class="h-12" src="~/images/logo.png" alt="VIBE"></a>
     </h1>
     <div class="user">
       {#if current_user}

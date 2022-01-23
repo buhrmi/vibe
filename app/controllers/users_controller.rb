@@ -1,10 +1,8 @@
 class UsersController < ApplicationController
   wrap_parameters :user, include: [:email, :password, :name]
   before_action :normalize_url, only: [:show]
-  before_action :validate_captcha!, only: [:create]
   
   def new
-    
     render inertia: 'users/new'
   end
 
@@ -16,7 +14,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    validate_captcha!
     return redirect_to user_path(current_user), notice: 'You are already logged in' if current_user
     user = User.create!(create_params.merge(locale: I18n.locale))
     session[:user_id] = user.id
@@ -26,10 +23,6 @@ class UsersController < ApplicationController
   private
   def create_params
     params.require(:user).permit(:name, :email, :password)
-  end
-
-  def validate_captcha!
-    head 403 unless Digest::SHA256.hexdigest(params[:name].to_s + params[:salt].to_s).starts_with?('000')
   end
 
   def normalize_url
