@@ -1,4 +1,5 @@
 <script>
+  import { inertia } from '@inertiajs/inertia-svelte'
   export let clicked
 </script>
 
@@ -14,10 +15,15 @@
     
       <a target="_blank" href="https://www.blockchain.com/btc/address/bc1qccdh533ecmcfzk5uu2s2qy36lvv2s22n07qxlx">Check transactions on the Blockchain</a>
     </p>
-    <p>Afterwards, please join our Discord and wait for further announcements</p>
+    <p>Afterwards, please join our Discord server for further instructions and announcements</p>
   {:else}
     <p>Please click the button below to reveal the address.</p>
-    <button on:click={() => clicked=true}>I will not send Bitcoin from an exchange.</button>
+    <p>
+      <button on:click={() => clicked=true}>I will not send Bitcoin from an exchange.</button>
+    </p>
+    <p>
+      <a use:inertia href="/users/new">Nah, fuck that, continue without investing</a>
+    </p>
   {/if}
   
 </main>

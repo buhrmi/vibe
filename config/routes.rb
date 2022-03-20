@@ -7,11 +7,12 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
 
   inertia 'invest' => 'static/invest'
+  inertia 'about' => 'static/about'
 
   scope '/:name' do
     get '/', to: 'users#show'
   end  
 
   inertia '/' => 'static/invest'
-  
+
 end
