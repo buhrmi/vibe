@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   end  
 
   inertia '/' => 'static/invest'
+  
 end

@@ -11,7 +11,7 @@ class UsersTest < ApplicationSystemTestCase
   end
   
   test "a user can sign up, log out, change password, log in" do
-    visit '/'
+    visit '/users/new'
 
     fill_in 'username', with: 'test'
     fill_in 'email', with: 'derp@derp.com'
