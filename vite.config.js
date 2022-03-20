@@ -30,7 +30,7 @@ export default ({mode}) => {
       Unocss({
         extractors: [extractorSvelte],
         presets: [
-          presetAttributify(),
+          //presetAttributify(),
           presetUno(),
         ]
       }),
