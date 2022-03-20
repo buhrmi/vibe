@@ -3,8 +3,8 @@ import ruby from 'vite-plugin-ruby'
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import importAssets from 'svelte-preprocess-import-assets'
 import Unocss from 'unocss/vite'
-// import presetAttributify from '@unocss/preset-attributify'
-import preset from '@unocss/preset-uno'
+import presetAttributify from '@unocss/preset-attributify'
+import presetUno from '@unocss/preset-uno'
 import { extractorSvelte } from '@unocss/core'
 
 export default ({mode}) => {
@@ -30,8 +30,8 @@ export default ({mode}) => {
       Unocss({
         extractors: [extractorSvelte],
         presets: [
-          // presetAttributify(),
-          preset(),
+          presetAttributify(),
+          presetUno(),
         ]
       }),
     ],

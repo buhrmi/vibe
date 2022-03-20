@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   get '/login', to: 'sessions#new'
 
-  inertia 'about' => 'static/about'
+  inertia 'invest' => 'static/invest'
 
   scope '/:name' do
     get '/', to: 'users#show'
   end  
 
-  root "users#new"
+  inertia '/' => 'static/invest'
 end

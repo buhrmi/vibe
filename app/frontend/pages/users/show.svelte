@@ -1,7 +1,7 @@
 <script>
-  import Popup from '~/components/popup.svelte'
-  import Item from '~/components/item.svelte'
+  import { inertia } from '@inertiajs/inertia-svelte'
   export let user
+  
 </script>
 
 <svelte:head>
@@ -10,7 +10,7 @@
 
 <main class="container">
   <h2>{user.name}</h2>
-  <p>Nothing to see here just yet</p>
+  <a use:inertia href="/invest">Invest</a>
 </main>
 
 <style>

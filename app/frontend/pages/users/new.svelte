@@ -1,8 +1,6 @@
 <script>
   import { useForm, inertia } from '@inertiajs/inertia-svelte'
   import { onMount } from 'svelte';
-  import Item from '~/components/item.svelte';
-
 
   let form = useForm('player', {email: '', password: '', name: ''})
   onMount(function() {
@@ -16,7 +14,7 @@
 <main class="container">
 
 
-  <h2>Create your profile</h2>
+  <h2>Are you ready to vibe?</h2>
   <form on:submit|preventDefault={createUser}>
     <p>
       <span class="username">
@@ -52,6 +50,4 @@
     border-radius: 0.25rem;
     display: inline-block;
   }
-
-
 </style>
