@@ -11,4 +11,6 @@
     <h2>Socials</h2>
     <a target="_blank" href="https://www.instagram.com/vibe_tokyo">Instagram</a><br>
     <a target="_blank" href="https://www.facebook.com/Vibe.jp/">Facebook</a>
+    <a target="_blank" href="https://discord.gg/nrA8yDzSvf">Discord</a>
+    
 </div>
