@@ -10,7 +10,7 @@
 
 <main class="container">
   <h2>{user.name}</h2>
-  <a use:inertia href="/invest">Invest</a>
+  <p>Nothing to see here just yet.</p>
 </main>
 
 <style>
