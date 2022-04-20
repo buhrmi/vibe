@@ -33,7 +33,7 @@
 <footer bind:clientHeight={footerHeight}>
   <div class="container">
     <hr>
-    <p>Copyright &copy; 2022 Vibe Tokyo | <a use:inertia href="/invest">Invest</a> | <a href="/about">About</a></p>
+    <p>Copyright &copy; 2022 Vibe Tokyo | <a href="/about">About</a></p>
   </div>
 </footer>
 
